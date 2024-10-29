@@ -1,0 +1,18 @@
+package com.remedios.gui.curso.usuario;
+
+import java.time.LocalDate;
+
+import com.remedios.gui.curso.remedio.Laboratorio;
+import com.remedios.gui.curso.remedio.Via;
+
+import jakarta.persistence.Enumerated;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotBlank;
+
+public record DadosAutenticacao() {
+	@NotBlank
+	String login;
+	
+	@NotBlank
+	String senha;
+}

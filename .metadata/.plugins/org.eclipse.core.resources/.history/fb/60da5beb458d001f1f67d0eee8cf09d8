@@ -1,0 +1,5 @@
+package com.remedios.gui.curso.usuario;
+
+public record DadosDetalhamentoUsuario(String id, String login) {
+
+}

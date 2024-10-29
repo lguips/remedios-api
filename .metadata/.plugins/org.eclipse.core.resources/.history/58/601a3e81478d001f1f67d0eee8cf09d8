@@ -1,0 +1,28 @@
+package com.remedios.gui.curso.usuario;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import jakarta.validation.constraints.NotBlank;
+
+public record DadosCadastroUsuario(
+		@NotBlank
+		String login,
+		
+		@NotBlank
+		String senha
+		) {
+	
+	public DadosCadastroUsuario(Usuario usuario) {
+		this(
+				usuario.getLogin(),
+				
+				);
+	}
+	
+	public String encryptPassword(Usuario usuario) {
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		String result = encoder.encode(usuario.getSenha());
+		System.out.println(result);
+	}
+
+}

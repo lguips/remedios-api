@@ -1,0 +1,5 @@
+package com.remedios.gui.curso.infra;
+
+public class TokenService {
+
+}
